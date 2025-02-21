@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import billingPandaLogo from '../assets/billing-panda-logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-2xl font-bold text-orange-600">DigiAgency</Link>
+            <Link to="/" className="flex items-center space-x-2">
+              <img src={billingPandaLogo} alt="Billing Panda Logo" className="h-12 w-12 object-contain" />
+              <span className="text-2xl font-bold text-orange-600">Billing Panda</span>
+            </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -41,6 +45,12 @@ const Navbar = () => {
               className={`${isActive('/gallery') ? 'text-orange-600' : 'text-gray-700'} hover:text-orange-600 transition-colors`}
             >
               Gallery
+            </Link>
+            <Link 
+              to="/branches" 
+              className={`${isActive('/branches') ? 'text-orange-600' : 'text-gray-700'} hover:text-orange-600 transition-colors`}
+            >
+              Our Branches
             </Link>
             <Link 
               to="/contact" 
@@ -95,6 +105,13 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
           >
             Gallery
+          </Link>
+          <Link 
+            to="/branches" 
+            className={`block px-3 py-2 ${isActive('/branches') ? 'text-orange-600' : 'text-gray-700'} hover:text-orange-600 transition-colors`}
+            onClick={() => setIsOpen(false)}
+          >
+            Our Branches
           </Link>
           <Link 
             to="/contact" 
