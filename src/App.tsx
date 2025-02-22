@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Branches from './pages/Branches';
+import ContactPopup from './components/ContactPopup'; // Import the popup component
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -26,6 +27,8 @@ function App() {
           style={{ scaleX }}
         />
         <Navbar />
+        <ContactPopup /> {/* Show the popup globally */}
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
