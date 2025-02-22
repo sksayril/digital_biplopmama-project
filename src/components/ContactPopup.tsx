@@ -53,7 +53,7 @@ const ContactPopup = () => {
             <form onSubmit={handleSubmit} className="space-y-3">
               <input type="text" placeholder="Your Name" required className="w-full p-2 border border-orange-500 rounded-md focus:ring-2 focus:ring-orange-500" />
               <input type="email" placeholder="Your Email" required className="w-full p-2 border border-orange-500 rounded-md focus:ring-2 focus:ring-orange-500" />
-              <input type="number" placeholder="Your Conatct Number" required className="w-full p-2 border border-orange-500 rounded-md focus:ring-2 focus:ring-orange-500" />
+              <input type="number" placeholder="Your Contact Number" required className="w-full p-2 border border-orange-500 rounded-md focus:ring-2 focus:ring-orange-500" />
               <textarea placeholder="Your Message" required className="w-full p-2 border border-orange-500 rounded-md focus:ring-2 focus:ring-orange-500"></textarea>
               <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition duration-300">
                 Submit
